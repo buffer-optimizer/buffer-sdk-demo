@@ -19,15 +19,15 @@ Buffer SDK for Node.js and Browser environments - A demonstration implementation
 ## Installation
 
 ```bash
-npm install @buffer/sdk
+npm install @buffer/sdk-demo
 ```
 
 ```bash
-yarn add @buffer/sdk
+yarn add @buffer/sdk-demo
 ```
 
 ```bash
-pnpm add @buffer/sdk
+pnpm add @buffer/sdk-demo
 ```
 
 ## Quick Start
@@ -35,7 +35,7 @@ pnpm add @buffer/sdk
 ### Basic Usage
 
 ```typescript
-import { createBufferClient } from '@buffer/sdk';
+import { createBufferClient } from '@buffer/sdk-demo';
 
 // Initialize the client
 const client = await createBufferClient({
@@ -165,7 +165,7 @@ interface BufferClientConfig {
 The SDK provides detailed error information through the `BufferAPIError` class:
 
 ```typescript
-import { BufferAPIError } from '@buffer/sdk';
+import { BufferAPIError } from '@buffer/sdk-demo';
 
 try {
   const post = await client.posts.get('invalid-post-id');
@@ -198,7 +198,7 @@ import type {
   PostAnalytics, 
   AnalyticsSummary,
   SocialPlatform 
-} from '@buffer/sdk';
+} from '@buffer/sdk-demo';
 
 // All API responses are fully typed
 const profiles: BufferProfile[] = await client.profiles.list();
