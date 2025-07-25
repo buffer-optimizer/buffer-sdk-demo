@@ -448,8 +448,49 @@ export interface OptimalTimingAnalysis {
     lastUpdated: string;
 }
 
+export interface HTTPClient {
+    get<T = any>(url: string, config?: any): Promise<{ data: T }>;
+    post<T = any>(url: string, data?: any, config?: any): Promise<{ data: T }>;
+    put<T = any>(url: string, data?: any, config?: any): Promise<{ data: T }>;
+    delete<T = any>(url: string, config?: any): Promise<{ data: T }>;
+    defaults?: any;
+    interceptors?: any;
+}
+
+// Configuration interface
+export interface BufferClientConfig {
+    accessToken: string;
+    baseUrl?: string;
+    timeout?: number;
+    retryAttempts?: number;
+    retryDelay?: number;
+    rateLimit?: {
+        requests: number;
+        window: number;
+    };
+    bufferSDK?: {
+        clientId: string;
+        clientSecret: string;
+        redirectUri: string;
+        sdkMockMode: boolean;
+    } | any
+}
+
+export interface SDKRetryConfig {
+    attempts: number;
+    delay: number;
+    backoffFactor: number;
+}
+
+export interface SDKRateLimitState {
+    requests: number;
+    resetTime: number;
+}
+
 // Export all types as a namespace as well for convenience
 export namespace BufferTypes {
+    export type RetryConfig = SDKRetryConfig;
+    export type RateLimitState = SDKRateLimitState;
     export type Platform = SocialPlatform;
     export type Profile = BufferProfile;
     export type Post = BufferPost;
