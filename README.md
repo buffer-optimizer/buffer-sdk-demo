@@ -304,9 +304,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- 📖 [Documentation](https://docs.buffer.com/sdk) *(Demo documentation)*
-- 🐛 [Issue Tracker](https://github.com/bufferapp/buffer-sdk/issues) *(Demo repository)*
-- 💬 [Community Discussions](https://github.com/bufferapp/buffer-sdk/discussions) *(Demo discussions)*
 - 📧 [Contact](mailto:kingsleybrew@gmail.com) *(Creator contact)*
 
 ## Changelog
